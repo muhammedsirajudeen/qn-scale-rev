@@ -1,0 +1,25 @@
+{
+  "name": "qn-scale-reader",
+  "version": "1.0.0",
+  "description": "Standalone Node.js client for Healthify QN-Scale weighing scales over BLE",
+  "main": "qn-scale.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node qn-scale.js",
+    "scan": "node qn-scale.js scan",
+    "inspect": "node qn-scale.js inspect",
+    "capture": "node qn-scale.js capture",
+    "measure": "node qn-scale.js measure",
+    "history": "node qn-scale.js history",
+    "export": "node qn-scale.js export --format csv",
+    "test": "node --test tests/test_protocol.js tests/test_decoder.js tests/test_storage.js"
+  },
+  "dependencies": {
+    "node-ble": "^1.13.0",
+    "sqlite3": "^6.0.1"
+  },
+  "license": "MIT"
+}
